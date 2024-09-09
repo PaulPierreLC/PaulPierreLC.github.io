@@ -3,6 +3,13 @@
     margin: 0 10px 10px 0; 
 }
 
+.container{
+    margin:6em auto;
+    width: 50%;
+    display: flex;
+    gap: 10em;
+}
+
 .logos {
     display: inline;
     width: 30%;
@@ -14,6 +21,7 @@
     z-index: 999;
 }
 
+
 :root {
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
@@ -21,3 +29,4 @@
   @supports (font-variation-settings: normal) {
     :root { font-family: InterVariable, sans-serif; }
   }
+
