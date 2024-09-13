@@ -5,9 +5,9 @@
 
 .container{
     margin:6em auto;
-    width: 50%;
+    width: 60%;
     display: flex;
-    gap: 10em;
+    gap: 20em;
 }
 
 .logos {
@@ -16,9 +16,9 @@
 }
 
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
+    position: fixed;
+    align-items: center;
+    top: 12em;
 }
 
 
