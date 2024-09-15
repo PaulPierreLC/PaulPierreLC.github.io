@@ -3,11 +3,29 @@
     margin: 0 10px 10px 0; 
 }
 
+ul li {
+    list-style-type: none;
+}
+
 .container{
     margin:6em auto;
     width: 60%;
     display: flex;
     gap: 20em;
+}
+
+.presentation {
+    font-size: large;
+}
+
+.formation {
+    line-height: 10px;   /* within paragraph */
+    margin-bottom: 30px; /* between paragraphs */
+}
+.skills {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
 }
 
 .logos {
@@ -18,7 +36,7 @@
 .header {
     position: fixed;
     align-items: center;
-    top: 12em;
+    top: 30%;
 }
 
 
