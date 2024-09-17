@@ -1,6 +1,23 @@
-.socials {
-    height: 32px;
-    margin: 0 10px 10px 0; 
+body {
+    display: flex;
+    height: 100vh;
+}
+
+    
+main {
+    flex-grow: 5;
+    overflow: auto;
+    height: 300vh;
+}
+
+header {
+    position: sticky;
+    flex: 50%;
+    top: 0;
+}
+/* https://stackoverflow.com/questions/41409834/how-to-use-position-fixed-in-flex-layout */
+section {
+    margin-bottom: 10em;
 }
 
 ul li {
@@ -10,22 +27,20 @@ ul li {
 .container{
     margin:6em auto;
     width: 60%;
-    display: flex;
     gap: 20em;
 }
 
 .presentation {
-    font-size: large;
+    font-size: 2em;
 }
 
 .formation {
-    line-height: 10px;   /* within paragraph */
-    margin-bottom: 30px; /* between paragraphs */
+    line-height: 10px;
+    margin-bottom: 30px;
 }
+
 .skills {
     columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
 }
 
 .logos {
@@ -33,11 +48,12 @@ ul li {
     width: 30%;
 }
 
-.header {
-    position: fixed;
-    align-items: center;
-    top: 30%;
+.socials {
+    height: 32px;
+    margin: 0 10px 10px 0; 
 }
+
+
 
 
 :root {
