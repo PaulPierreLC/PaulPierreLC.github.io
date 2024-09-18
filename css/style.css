@@ -38,6 +38,18 @@ ul li {
     columns: 2;
 }
 
+.grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+    }
+  
+.grid-item {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
 .logos {
     display: inline;
     width: 30%;
