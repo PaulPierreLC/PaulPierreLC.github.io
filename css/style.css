@@ -1,23 +1,18 @@
-body {
-    display: flex;
-    height: 100vh;
-}
-
-    
 main {
-    flex-grow: 5;
-    overflow: auto;
-    height: 300vh;
+    position: absolute;
+    top: 10em;
+    right: 20%;
+    width: 40%;
 }
 
 header {
-    position: sticky;
-    flex: 50%;
-    top: 0;
+    position: fixed;
+    top: 10em;
+    left: 10em;
 }
-/* https://stackoverflow.com/questions/41409834/how-to-use-position-fixed-in-flex-layout */
+
 section {
-    margin-bottom: 10em;
+    margin-bottom: 5em;
 }
 
 ul li {
