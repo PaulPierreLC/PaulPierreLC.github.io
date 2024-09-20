@@ -1,3 +1,11 @@
+/* ############# Main Columns ############# */
+
+.container{
+    margin:6em auto;
+    width: 60%;
+    gap: 20em;
+}
+
 main {
     position: absolute;
     top: 10em;
@@ -11,18 +19,16 @@ header {
     left: 10em;
 }
 
-section {
-    margin-bottom: 5em;
-}
+/* ############# General Formating ############# */
 
 ul li {
     list-style-type: none;
 }
 
-.container{
-    margin:6em auto;
-    width: 60%;
-    gap: 20em;
+/* ############# Spacing & Font Size ############# */
+
+section {
+    margin-bottom: 5em;
 }
 
 .presentation {
@@ -34,21 +40,7 @@ ul li {
     margin-bottom: 30px;
 }
 
-.skills {
-    columns: 2;
-}
-
-.grid-container {
-        display: grid;
-        grid-template-columns: auto auto;
-        padding: 10px;
-    }
-  
-.grid-item {
-    padding: 20px;
-    font-size: 20px;
-    text-align: center;
-}
+/* ############# Socials ############# */
 
 .logos {
     display: inline;
@@ -60,14 +52,13 @@ ul li {
     margin: 0 10px 10px 0; 
 }
 
-
-
+/* ############# Font ############# */
 
 :root {
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
-  }
-  @supports (font-variation-settings: normal) {
-    :root { font-family: InterVariable, sans-serif; }
-  }
+}
+@supports (font-variation-settings: normal) {
+:root { font-family: InterVariable, sans-serif; }
+}
 
