@@ -1,6 +1,13 @@
+/* ############# Global ############# */
+
+body {
+    color:white;
+    background-color:#03224c;
+}
+
 /* ############# Main Columns ############# */
 
-.container{
+.container {
     margin:6em auto;
     width: 60%;
     gap: 20em;
