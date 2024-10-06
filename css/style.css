@@ -2,34 +2,53 @@
 
 body {
     color:white;
-    background-color:#03224c;
+    background-color:rgb(29, 5, 61);
 }
 
 /* ############# Main Columns ############# */
 
-.container {
-    margin:6em auto;
-    width: 60%;
-    gap: 20em;
+body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+    margin-bottom: 10em;
 }
 
-main {
-    position: absolute;
-    top: 10em;
-    right: 20%;
-    width: 40%;
+.columns {
+    display: flex;
+    flex-direction: row;
+}
+
+.topspace {
+    height:10%;
 }
 
 header {
+    width: 40%;
+}
+
+main {
+    width: 50%;
+}
+
+footer {
+    text-align: center;
+    opacity: 0.3;
+    margin-top: 10em;
+}
+
+.bloc {
     position: fixed;
     top: 10em;
     left: 10em;
+    font-size: 1vw;
 }
 
 /* ############# General Formating ############# */
 
 ul li {
     list-style-type: none;
+    margin-bottom: 30px;
 }
 
 /* ############# Spacing & Font Size ############# */
@@ -38,8 +57,19 @@ section {
     margin-bottom: 5em;
 }
 
+h2 {
+    margin-bottom: 1em;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(2, 50px);
+    gap: 10px;
+}
+  
 .presentation {
     font-size: 2em;
+    margin-bottom: 10em;
 }
 
 .formation {
@@ -55,7 +85,7 @@ section {
 }
 
 .socials {
-    height: 32px;
+    height: 2vw;
     margin: 0 10px 10px 0; 
 }
 
