@@ -159,8 +159,8 @@ footer {
 /* Raindrop styles */
 .raindrop {
     position: fixed;
-    width: 2px;
-    height: 15px;
+    width: 0.2vw;
+    height: 0.6vw;  
     background-color: rgba(255, 255, 255, 0.1); /* Light white raindrop */
     border-radius: 50%;
     animation: fall linear infinite;
