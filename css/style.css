@@ -2,7 +2,7 @@
 
 body {
     color:white;
-    background-color:rgb(29, 5, 61);
+    background-color:rgb(30, 5, 60);
 }
 
 /* ############# Main Columns ############# */
@@ -10,7 +10,6 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    margin-top: 5em;
     margin-bottom: 10em;
 }
 
@@ -19,57 +18,99 @@ body {
     flex-direction: row;
 }
 
-.topspace {
-    height:10%;
-}
-
-header {
-    width: 40%;
-}
-
 main {
-    width: 50%;
+    margin-top: 15em;
 }
 
-footer {
-    text-align: center;
-    opacity: 0.3;
-    margin-top: 10em;
-}
-
-.bloc {
+.bloc { 
+    background-color: rgba(40, 10, 70, 0.7);
     position: fixed;
-    top: 10em;
-    left: 10em;
-    font-size: 1vw;
+    z-index: 3; /* ignore rain effect */
+}
+
+/* mobile */
+@media (max-width:60em)  { 
+    .bloc {
+        display:inline;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8em;
+    }
+
+    .bloc .text {
+        left: 30em;
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+        justify-content: space-between; 
+    }
+
+    .bloc h1 {
+        font-size: 3em;
+    }
+
+    header {
+        width: 10%;
+    }
+    
+    main {
+        width: 80%;
+    }
+}
+
+/* desktop */
+@media (min-width:60em)  { 
+    .bloc {
+        top: 10em;
+        left: 10em;
+        padding: 1em;
+        font-size: 1.2vw;
+    }
+
+    .bloc h1 {
+        font-size: 3em;
+    }
+
+    header {
+        width: 40%;
+    }
+    
+    main {
+        width: 50%;
+    }
+
 }
 
 /* ############# General Formating ############# */
 
-ul li {
+main ul {
     list-style-type: none;
     margin-bottom: 30px;
 }
 
 /* ############# Spacing & Font Size ############# */
 
-section {
+main section {
     margin-bottom: 5em;
+    /* box-shadow: 0 0 3px white;
+    padding: 1em; */
 }
 
-h2 {
-    margin-bottom: 1em;
+main h2 {
+    margin-bottom: 2em;
 }
-.wrapper {
+
+/* .wrapper {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(2, 50px);
     gap: 10px;
-}
+} */
   
 .presentation {
     font-size: 2em;
-    margin-bottom: 10em;
+    margin-bottom: 15em;
 }
 
 .formation {
@@ -77,16 +118,18 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* ############# Socials ############# */
+/* ############# Footer ############# */
 
-.logos {
-    display: inline;
-    width: 30%;
+footer {
+    text-align: center;
+    opacity: 0.3;
+    margin-top: 15em;
 }
 
 .socials {
-    height: 2vw;
-    margin: 0 10px 10px 0; 
+    height: 2em;
+    margin-right: 10px;
+    margin-bottom: 2em;
 }
 
 /* ############# Font ############# */
@@ -99,3 +142,33 @@ h2 {
 :root { font-family: InterVariable, sans-serif; }
 }
 
+
+
+/* ############# Rain ############# */
+
+.rain-container {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Allow clicks to pass through the rain */
+    z-index: 1; /* Make sure the rain is on top of other elements */
+}
+
+/* Raindrop styles */
+.raindrop {
+    position: fixed;
+    width: 2px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light white raindrop */
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+/* Raindrop animation */
+@keyframes fall {
+    to {
+        transform: translateY(100vh); /* Drop raindrop from top to bottom */
+    }
+}
