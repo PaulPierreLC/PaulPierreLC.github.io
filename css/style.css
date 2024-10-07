@@ -2,16 +2,14 @@
 
 body {
     color:white;
+    font-size: 1.2rem;
     background-color:rgb(30, 5, 60);
-}
-
-/* ############# Main Columns ############# */
-
-body {
     display: flex;
     flex-direction: column;
     margin-bottom: 10em;
 }
+
+/* ############# Main Columns ############# */
 
 .columns {
     display: flex;
@@ -19,7 +17,7 @@ body {
 }
 
 main {
-    margin-top: 15em;
+    margin-top: 5em;
 }
 
 .bloc { 
@@ -111,7 +109,7 @@ main h2 {
   
 .presentation {
     font-size: 2em;
-    margin-bottom: 15em;
+    margin-bottom: 10em;
 }
 
 .formation {
