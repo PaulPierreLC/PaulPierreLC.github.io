@@ -23,14 +23,14 @@ main {
 }
 
 .bloc { 
-    background-color: rgba(40, 10, 70, 0.7);
     position: fixed;
-    z-index: 3; /* ignore rain effect */
+    z-index: 3; /* ignore rain */
 }
 
-/* mobile */
+/***** Mobile ******/
 @media (max-width:60em)  { 
     .bloc {
+        background-color: rgba(40, 10, 70);
         display:inline;
         top: 0;
         left: 0;
@@ -59,9 +59,10 @@ main {
     }
 }
 
-/* desktop */
+/****** Desktop ******/
 @media (min-width:60em)  { 
     .bloc {
+        background-color: rgba(40, 10, 70, 0.5);
         top: 10em;
         left: 10em;
         padding: 1em;
@@ -82,14 +83,14 @@ main {
 
 }
 
-/* ############# General Formating ############# */
+/****** General Formating ******/
 
 main ul {
     list-style-type: none;
     margin-bottom: 30px;
 }
 
-/* ############# Spacing & Font Size ############# */
+/****** Spacing & Font Size ******/
 
 main section {
     margin-bottom: 5em;
@@ -118,7 +119,7 @@ main h2 {
     margin-bottom: 30px;
 }
 
-/* ############# Footer ############# */
+/****** Footer ******/
 
 footer {
     text-align: center;
@@ -132,7 +133,7 @@ footer {
     margin-bottom: 2em;
 }
 
-/* ############# Font ############# */
+/****** Font ******/
 
 :root {
     font-family: Inter, sans-serif;
@@ -144,31 +145,28 @@ footer {
 
 
 
-/* ############# Rain ############# */
+/****** Rain ******/
 
 .rain-container {
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none; /* Allow clicks to pass through the rain */
-    z-index: 1; /* Make sure the rain is on top of other elements */
+    top:0.5vh;
+    left:0.5vw;
+    width: 99vw;
+    height: 99vh;
+    pointer-events: none; 
+    z-index: 1; 
 }
 
-/* Raindrop styles */
 .raindrop {
     position: fixed;
-    width: 0.2vw;
-    height: 0.6vw;  
-    background-color: rgba(255, 255, 255, 0.1); /* Light white raindrop */
-    border-radius: 50%;
+    width: 0.15em;
+    height: 0.6em;  
+    background-color: rgba(255, 255, 255, 0.1); 
     animation: fall linear infinite;
 }
 
 /* Raindrop animation */
 @keyframes fall {
     to {
-        transform: translateY(100vh); /* Drop raindrop from top to bottom */
+        transform: translateY(100vh);
     }
 }
