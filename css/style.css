@@ -28,7 +28,7 @@ main {
 }
 
 /***** Mobile ******/
-@media (max-width:60em)  { 
+@media (max-width:40em)  { 
     .bloc {
         background-color: rgba(40, 10, 70);
         display:inline;
@@ -60,7 +60,7 @@ main {
 }
 
 /****** Desktop ******/
-@media (min-width:60em)  { 
+@media (min-width:40em)  { 
     .bloc {
         background-color: rgba(40, 10, 70, 0.5);
         top: 10em;
