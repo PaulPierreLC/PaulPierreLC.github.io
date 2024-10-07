@@ -1,4 +1,4 @@
-/* ############# Global ############# */
+/************ Body ************/
 
 body {
     color:white;
@@ -9,22 +9,22 @@ body {
     margin-bottom: 10em;
 }
 
-/* ############# Main Columns ############# */
-
 .columns {
     display: flex;
     flex-direction: row;
 }
 
-main {
-    margin-top: 5em;
-    margin-bottom: 5em;
+/****** Font ******/
+
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+}
+@supports (font-variation-settings: normal) {
+:root { font-family: InterVariable, sans-serif; }
 }
 
-.bloc { 
-    position: fixed;
-    z-index: 3; /* ignore rain */
-}
+/************ Header ************/
 
 /***** Mobile ******/
 @media (max-width:1000px)  { 
@@ -45,10 +45,6 @@ main {
         justify-content: space-between; 
     }
 
-    .bloc h1 {
-        font-size: 3em;
-    }
-
     header {
         width: 10%;
     }
@@ -62,14 +58,12 @@ main {
 @media (min-width:1000px)  { 
     .bloc {
         background-color: rgba(40, 10, 70, 0.5);
+        border-radius: 10%;
         top: 10em;
         left: 10em;
         padding: 1em;
+        padding-top: 0;
         font-size: 1.2vw;
-    }
-
-    .bloc h1 {
-        font-size: 3em;
     }
 
     header {
@@ -82,7 +76,21 @@ main {
 
 }
 
-/****** General Formating ******/
+.bloc { 
+    position: fixed;
+    z-index: 3; /* ignore rain */
+}
+
+.bloc h1 {
+    font-size: 3em;
+}
+
+/***************** Main *****************/
+
+main {
+    margin-top: 10em;
+    margin-bottom: 5em;
+}
 
 main ul {
     list-style-type: none;
@@ -90,28 +98,33 @@ main ul {
 }
 
 main ul li {
-    gap:1em;
+    margin-bottom: 1em;
 }
-
-/****** Spacing & Font Size ******/
 
 main section {
     margin-bottom: 5em;
-    /* box-shadow: 0 0 3px white;
-    padding: 1em; */
 }
 
-main h2 {
-    margin-bottom: 2em;
+.competences li {
+    font-size: 1.2rem;
 }
 
-/* .wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(2, 50px);
-    gap: 10px;
-} */
-  
+.title {
+    margin-bottom: 1em;
+    font-size: 3rem;
+}
+
+.details_parent li {
+    margin-bottom: 3em;
+}
+
+.details > * {
+    font-size: 1.4rem;
+    margin: 0; 
+    margin-bottom: 1me;
+    padding: 0;
+}
+
 .presentation {
     font-size: 2em;
     margin-bottom: 10em;
@@ -136,17 +149,7 @@ footer {
     margin-bottom: 2em;
 }
 
-/****** Font ******/
-
-:root {
-    font-family: Inter, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1;
-}
-@supports (font-variation-settings: normal) {
-:root { font-family: InterVariable, sans-serif; }
-}
-
-/****** Rain ******/
+/************ Rain ************/
 
 .rain-container {
     top:0.5vh;
@@ -165,7 +168,6 @@ footer {
     animation: fall linear infinite;
 }
 
-/* Raindrop animation */
 @keyframes fall {
     to {
         transform: translateY(100vh);

@@ -16,7 +16,7 @@ function createRaindrop() {
 }
 
 function makeItRain() {
-    setInterval(createRaindrop, 50);  // Create a new raindrop every 50ms
+    setInterval(createRaindrop, 40);
 }
 
 makeItRain();
