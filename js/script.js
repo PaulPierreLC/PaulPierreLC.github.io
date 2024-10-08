@@ -16,7 +16,7 @@ function createRaindrop() {
 }
 
 function makeItRain() {
-    setInterval(createRaindrop, 40);
+    setInterval(createRaindrop, 20);
 }
 
 makeItRain();
