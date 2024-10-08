@@ -162,8 +162,8 @@ footer {
 
 .raindrop {
     position: fixed;
-    width: 0.3em;
-    height: 0.9em;  
+    width: 0.15em;
+    height: 0.6em;  
     background-color: rgba(255, 255, 255, 0.1); 
     animation: fall linear infinite;
 }
